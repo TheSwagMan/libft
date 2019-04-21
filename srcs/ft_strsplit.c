@@ -32,7 +32,7 @@ static char	*cut_and_add_to_array(char **n, char *s, char c)
 	size_t	si;
 
 	si = (size_t)ft_strchr(s, c);
-	si = si ? (char *)si - s : ft_strlen(s);
+	si = si ? (size_t)((char *)si - s) : ft_strlen(s);
 	if (si)
 	{
 		if (!(*n = ft_strnew(si)))
