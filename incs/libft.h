@@ -6,7 +6,7 @@
 /*   By: tpotier <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/02 19:08:22 by tpotier           #+#    #+#             */
-/*   Updated: 2019/05/02 18:41:08 by tpotier          ###   ########.fr       */
+/*   Updated: 2019/05/02 19:01:55 by tpotier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,13 @@ typedef struct		s_dlist
 	struct s_dlist	*prev;
 	struct s_dlist	*next;
 }					t_dlist;
+
+typedef struct		s_sstack
+{
+	int				*stack;
+	size_t			sp;
+	size_t			size;
+}					t_sstack;
 
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
@@ -102,5 +109,13 @@ void				ft_dlstdisp(t_dlist *stk, void (*dsp)(void *));
 void				ft_stkswap(t_dlist **stk);
 void				ft_stkpush(t_dlist **stk, void *n);
 void				*ft_stkpop(t_dlist **stk);
+
+void				ft_sstkswap(t_sstack *stk);
+void				ft_sstkpush(t_sstack *stk, int n);
+int					ft_sstkpop(t_sstack *stk);
+void				ft_sstkrot(t_sstack *stk);
+void				ft_sstkrrot(t_sstack *stk);
+int					ft_sstkchkord(t_sstack *stk);
+void				ft_sstkdisp(t_sstack *stk);
 
 #endif
