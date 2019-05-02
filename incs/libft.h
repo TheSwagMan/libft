@@ -6,7 +6,7 @@
 /*   By: tpotier <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/02 19:08:22 by tpotier           #+#    #+#             */
-/*   Updated: 2019/05/02 19:01:55 by tpotier          ###   ########.fr       */
+/*   Updated: 2019/05/02 19:44:07 by tpotier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
+
+# define GNL_BS		32
 
 typedef struct		s_list
 {
@@ -37,6 +39,14 @@ typedef struct		s_sstack
 	size_t			sp;
 	size_t			size;
 }					t_sstack;
+
+typedef struct	s_fb
+{
+	char		*buff;
+	int			fd;
+}				t_fb;
+
+int					ft_get_next_line(const int fd, char **line);
 
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
@@ -82,6 +92,8 @@ char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s);
 char				**ft_strsplit(char const *s, char c);
+int					ft_strlen_bfrchr(char *s, char c, size_t *size);
+int					ft_strncat_mal(char **s1, char *s2, size_t n);
 
 void				ft_putchar_fd(char c, int fd);
 void				ft_putchar(char c);
@@ -99,6 +111,9 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *nw);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+void				*ft_lstdelif(t_list **alst,
+						int (*cond)(void *, size_t, void *),
+						void *comp, void (*del)(void *, size_t));
 
 t_dlist				*ft_dlstnew(void *content);
 void				ft_dlstdel(t_dlist **lst, void (*del)(void *));
@@ -117,5 +132,7 @@ void				ft_sstkrot(t_sstack *stk);
 void				ft_sstkrrot(t_sstack *stk);
 int					ft_sstkchkord(t_sstack *stk);
 void				ft_sstkdisp(t_sstack *stk);
+t_sstack			*ft_sstkinit(size_t s);
+void				ft_sstkdel(t_sstack **stk);
 
 #endif
