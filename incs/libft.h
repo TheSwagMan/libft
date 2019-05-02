@@ -6,7 +6,7 @@
 /*   By: tpotier <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/02 19:08:22 by tpotier           #+#    #+#             */
-/*   Updated: 2019/05/02 19:44:07 by tpotier          ###   ########.fr       */
+/*   Updated: 2019/05/02 19:45:46 by tpotier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ typedef struct	s_fb
 	int			fd;
 }				t_fb;
 
-int					ft_get_next_line(const int fd, char **line);
+int					ft_getnextline(const int fd, char **line);
 
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);

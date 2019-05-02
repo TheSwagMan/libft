@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sstkinit.c                                      :+:      :+:    :+:   */
+/*   ft_strlen_bfrchr.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tpotier <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/02 19:32:30 by tpotier           #+#    #+#             */
-/*   Updated: 2019/05/02 19:49:18 by tpotier          ###   ########.fr       */
+/*   Created: 2019/04/12 20:17:01 by tpotier           #+#    #+#             */
+/*   Updated: 2019/04/12 22:41:09 by tpotier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_sstack			*ft_sstkinit(size_t s)
-{
-	t_sstack	*stk;
+/*
+** Get the size of a given str until occurence of char c
+** Returns 1 if the char is found else 0
+*/
 
-	if (!(stk = (t_sstack *)malloc(sizeof(*stk))))
-		return (NULL);
-	if (!(stk->stack = (int *)ft_memalloc(s * sizeof(int))))
-		return (NULL);
-	stk->sp = 0;
-	stk->size = s;
-	return (stk);
+int		ft_strlen_bfrchr(char *s, char c, size_t *size)
+{
+	if (!s || !size)
+		return (0);
+	*size = 0;
+	while (s[*size] && s[*size] != c)
+		(*size)++;
+	return (s[*size] == c ? 1 : 0);
 }

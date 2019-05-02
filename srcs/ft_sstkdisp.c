@@ -6,7 +6,7 @@
 /*   By: tpotier <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/02 19:00:41 by tpotier           #+#    #+#             */
-/*   Updated: 2019/05/02 19:04:10 by tpotier          ###   ########.fr       */
+/*   Updated: 2019/05/02 20:10:44 by tpotier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,10 @@ void				ft_sstkdisp(t_sstack *stk)
 {
 	size_t	i;
 
-	i = 0;
-	while (i < stk->sp - 1)
-		ft_putnbr(stk->stack[i++]);
+	i = stk->sp;
+	while (i > 0)
+	{
+		ft_putnbr(stk->stack[--i]);
+		ft_putchar('\n');
+	}
 }

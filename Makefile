@@ -6,7 +6,7 @@
 #    By: tpotier <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/01 16:36:41 by tpotier           #+#    #+#              #
-#    Updated: 2019/05/02 19:42:48 by tpotier          ###   ########.fr        #
+#    Updated: 2019/05/02 19:47:40 by tpotier          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,12 +18,13 @@ FILES = ft_memset ft_bzero ft_memcpy ft_memccpy ft_memmove ft_memchr \
 		ft_isascii ft_isprint ft_toupper ft_tolower \
 		ft_memalloc ft_memdel ft_strnew ft_strdel ft_strclr ft_striter \
 		ft_striteri ft_strmap ft_strmapi ft_strequ ft_strnequ ft_strsub \
-		ft_strjoin ft_strtrim ft_strsplit \
+		ft_strjoin ft_strtrim ft_strsplit ft_strlen_bfrchr ft_strncat_mal \
 		ft_putchar_fd ft_putchar ft_putstr_fd ft_putstr ft_putendl_fd \
 		ft_putendl ft_putnbr_fd ft_putnbr ft_itoa \
 		ft_dlstnew ft_dlstdel ft_dlstadd_end ft_dlstdelall ft_dlstdisp \
 		ft_stkswap ft_stkpush ft_stkpop \
 		ft_lstnew ft_lstdelone ft_lstdel ft_lstadd ft_lstiter ft_lstmap \
+		ft_lstdelif \
 		ft_sstkswap ft_sstkpush ft_sstkpop ft_sstkrot ft_sstkrrot \
 		ft_sstkchkord ft_sstkdisp ft_sstkinit ft_sstkdel \
 		ft_getnextline
