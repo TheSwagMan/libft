@@ -6,7 +6,7 @@
 /*   By: tpotier <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/02 19:08:22 by tpotier           #+#    #+#             */
-/*   Updated: 2019/04/04 02:18:42 by tpotier          ###   ########.fr       */
+/*   Updated: 2019/05/02 18:41:08 by tpotier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,13 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+typedef struct		s_dlist
+{
+	void			*content;
+	struct s_dlist	*prev;
+	struct s_dlist	*next;
+}					t_dlist;
 
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
@@ -82,8 +89,18 @@ char				*ft_itoa(int n);
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
-void				ft_lstadd(t_list **alst, t_list *new);
+void				ft_lstadd(t_list **alst, t_list *nw);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+
+t_dlist				*ft_dlstnew(void *content);
+void				ft_dlstdel(t_dlist **lst, void (*del)(void *));
+void				ft_dlstadd_end(t_dlist **lst, void *content);
+void				ft_dlstdelall(t_dlist **lst, void (*del)(void *));
+void				ft_dlstdisp(t_dlist *stk, void (*dsp)(void *));
+
+void				ft_stkswap(t_dlist **stk);
+void				ft_stkpush(t_dlist **stk, void *n);
+void				*ft_stkpop(t_dlist **stk);
 
 #endif
