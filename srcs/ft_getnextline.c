@@ -6,7 +6,7 @@
 /*   By: tpotier <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/05 18:34:43 by tpotier           #+#    #+#             */
-/*   Updated: 2019/05/02 19:41:02 by tpotier          ###   ########.fr       */
+/*   Updated: 2019/05/05 17:52:57 by tpotier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 ** found.
 */
 
-void	set_fd(t_list **l, char *str, int fd)
+static void		set_fd(t_list **l, char *str, int fd)
 {
 	t_list	*li;
 	t_list	*new;
@@ -45,13 +45,13 @@ void	set_fd(t_list **l, char *str, int fd)
 	}
 }
 
-int		check_fd(void *content, size_t size, void *comp)
+static int		check_fd(void *content, size_t size, void *comp)
 {
 	(void)size;
 	return (((t_fb *)content)->fd == *(int *)comp);
 }
 
-char	*del_fd(t_list **l, int fd)
+static char		*del_fd(t_list **l, int fd)
 {
 	t_fb	*last_occ;
 	char	*s;
@@ -63,7 +63,7 @@ char	*del_fd(t_list **l, int fd)
 	return (s);
 }
 
-int		get_fd_str(char **str, t_list **l, int fd, ssize_t *s)
+static int		get_fd_str(char **str, t_list **l, int fd, ssize_t *s)
 {
 	char		*buff;
 
@@ -88,7 +88,7 @@ int		get_fd_str(char **str, t_list **l, int fd, ssize_t *s)
 	return (1);
 }
 
-int		ft_getnextline(const int fd, char **line)
+int				ft_getnextline(const int fd, char **line)
 {
 	static t_list	*states = NULL;
 	ssize_t			s;
