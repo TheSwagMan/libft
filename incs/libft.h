@@ -6,7 +6,7 @@
 /*   By: tpotier <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/02 19:08:22 by tpotier           #+#    #+#             */
-/*   Updated: 2019/05/02 19:45:46 by tpotier          ###   ########.fr       */
+/*   Updated: 2019/05/05 17:54:08 by tpotier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,11 @@ typedef struct		s_sstack
 	size_t			size;
 }					t_sstack;
 
-typedef struct	s_fb
+typedef struct		s_fb
 {
-	char		*buff;
-	int			fd;
-}				t_fb;
+	char			*buff;
+	int				fd;
+}					t_fb;
 
 int					ft_getnextline(const int fd, char **line);
 
