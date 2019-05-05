@@ -6,7 +6,7 @@
 /*   By: tpotier <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/02 17:26:06 by tpotier           #+#    #+#             */
-/*   Updated: 2019/05/05 18:44:08 by tpotier          ###   ########.fr       */
+/*   Updated: 2019/05/05 19:13:26 by tpotier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void				ft_dlstdel(t_dlist **lst, void (*del)(void *))
 {
+	t_dlist	*t;
+
 	if (!lst || !*lst)
 		return ;
 	if ((*lst)->prev)
@@ -22,6 +24,7 @@ void				ft_dlstdel(t_dlist **lst, void (*del)(void *))
 		(*lst)->next->prev = (*lst)->prev;
 	if (del)
 		del((*lst)->content);
+	t = (*lst)->prev;
 	free(*lst);
-	*lst = NULL;
+	*lst = t;
 }
