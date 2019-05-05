@@ -6,7 +6,7 @@
 /*   By: tpotier <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/02 19:08:22 by tpotier           #+#    #+#             */
-/*   Updated: 2019/05/05 18:28:56 by tpotier          ###   ########.fr       */
+/*   Updated: 2019/05/05 22:35:14 by tpotier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,8 @@ int					ft_isascii(int c);
 int					ft_isprint(int c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
+size_t				ft_nlen_base(long long n, int base);
+long long			ft_max(long long a, long long b);
 
 void				ft_swap(void *a, void *b, size_t s);
 void				*ft_memalloc(size_t size);
