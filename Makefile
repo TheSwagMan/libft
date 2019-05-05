@@ -6,7 +6,7 @@
 #    By: tpotier <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/01 16:36:41 by tpotier           #+#    #+#              #
-#    Updated: 2019/05/05 18:10:31 by tpotier          ###   ########.fr        #
+#    Updated: 2019/05/05 18:11:48 by tpotier          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,8 +51,8 @@ $(NAME): $(OBJS)
 	$(CC) -o $@ -c $< $(CFLAGS)
 
 list: all
-	@nm libft.a -Ug | grep "T _" | sed "s/.*T _//"
-	@cat $(INCS) | grep -G "\t\\*\{0,\}ft" --color=none
+	@nm libft.a -Ug | grep "T _" | sed "s/.*T _//" | sort
+	@cat $(INCS) | grep -G "\t\\*\{0,\}ft" | sort
 
 clean:
 	rm -f $(OBJS) $(DEPS)
