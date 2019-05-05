@@ -6,7 +6,7 @@
 #    By: tpotier <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/01 16:36:41 by tpotier           #+#    #+#              #
-#    Updated: 2019/05/02 19:47:40 by tpotier          ###   ########.fr        #
+#    Updated: 2019/05/05 17:58:26 by tpotier          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,6 +50,9 @@ $(NAME): $(OBJS)
 %.o: %.c
 	$(CC) -o $@ -c $< $(CFLAGS)
 
+list: all
+	nm libft.a -Ug | grep "T _" | sed "s/.*T _//"
+
 clean:
 	rm -f $(OBJS) $(DEPS)
 
@@ -58,5 +61,5 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all $(name) clean fclean re
+.PHONY: all $(name) clean fclean re list
 -include $(DEPS)
