@@ -6,14 +6,14 @@
 #    By: tpotier <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/01 16:36:41 by tpotier           #+#    #+#              #
-#    Updated: 2019/05/05 22:35:49 by tpotier          ###   ########.fr        #
+#    Updated: 2019/05/05 23:22:21 by tpotier          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
 FILES = ft_memset ft_bzero ft_memcpy ft_memccpy ft_memmove ft_memchr \
 		ft_memcmp ft_strlen ft_strdup ft_strcpy ft_strncpy ft_strcat \
-		ft_swap ft_max \
+		ft_swap ft_max ft_atoi_len ft_putnstr \
 		ft_strncat ft_strlcat ft_strchr ft_strrchr ft_strstr ft_strnstr \
 		ft_strcmp ft_strncmp ft_atoi ft_isalpha ft_isdigit ft_isalnum \
 		ft_isascii ft_isprint ft_toupper ft_tolower ft_nlen_base \
@@ -28,7 +28,9 @@ FILES = ft_memset ft_bzero ft_memcpy ft_memccpy ft_memmove ft_memchr \
 		ft_lstdelif \
 		ft_sstkswap ft_sstkpush ft_sstkpop ft_sstkrot ft_sstkrrot \
 		ft_sstkchkord ft_sstkdisp ft_sstkinit ft_sstkdel \
-		ft_getnextline
+		ft_getnextline \
+		ft_printf io parsing parsing_utils io_csr io_doxb io_utils cast io_f \
+		io_k io_other io_p
 
 IFILES = libft.h
 NAME = libft.a
