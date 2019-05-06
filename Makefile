@@ -6,14 +6,14 @@
 #    By: tpotier <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/01 16:36:41 by tpotier           #+#    #+#              #
-#    Updated: 2019/05/05 23:46:34 by tpotier          ###   ########.fr        #
+#    Updated: 2019/05/06 02:39:36 by tpotier          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
 FILES = ft_memset ft_bzero ft_memcpy ft_memccpy ft_memmove ft_memchr \
 		ft_memcmp ft_strlen ft_strdup ft_strcpy ft_strncpy ft_strcat \
-		ft_swap ft_max ft_atoi_len ft_putnstr \
+		ft_swap ft_max ft_atoi_len ft_putnstr ft_map \
 		ft_strncat ft_strlcat ft_strchr ft_strrchr ft_strstr ft_strnstr \
 		ft_strcmp ft_strncmp ft_atoi ft_isalpha ft_isdigit ft_isalnum \
 		ft_isascii ft_isprint ft_toupper ft_tolower ft_nlen_base \

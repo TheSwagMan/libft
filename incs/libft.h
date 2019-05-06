@@ -6,7 +6,7 @@
 /*   By: tpotier <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/02 19:08:22 by tpotier           #+#    #+#             */
-/*   Updated: 2019/05/05 23:36:52 by tpotier          ###   ########.fr       */
+/*   Updated: 2019/05/06 02:39:27 by tpotier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,6 +95,12 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
+typedef struct		s_inter
+{
+	long			l;
+	long			r;
+}					t_inter;
+
 typedef struct		s_dlist
 {
 	void			*content;
@@ -114,6 +120,8 @@ typedef struct		s_fb
 	char			*buff;
 	int				fd;
 }					t_fb;
+
+long				ft_map(long n, t_inter in, t_inter out);
 
 int					ft_getnextline(const int fd, char **line);
 
