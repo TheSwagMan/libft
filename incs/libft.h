@@ -6,7 +6,7 @@
 /*   By: tpotier <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/02 19:08:22 by tpotier           #+#    #+#             */
-/*   Updated: 2019/05/06 02:39:27 by tpotier          ###   ########.fr       */
+/*   Updated: 2019/05/06 02:43:21 by tpotier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -155,6 +155,7 @@ int					ft_toupper(int c);
 int					ft_tolower(int c);
 size_t				ft_nlen_base(long long n, int base);
 long long			ft_max(long long a, long long b);
+long long			ft_min(long long a, long long b);
 long				ft_atoi_len(char *str, size_t *i);
 void				ft_putnstr(char *str, size_t len);
 void				ft_putnchar(char c, int n);
