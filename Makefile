@@ -6,7 +6,7 @@
 #    By: tpotier <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/01 16:36:41 by tpotier           #+#    #+#              #
-#    Updated: 2019/05/06 02:43:45 by tpotier          ###   ########.fr        #
+#    Updated: 2019/08/06 15:43:17 by tpotier          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ FILES = ft_memset ft_bzero ft_memcpy ft_memccpy ft_memmove ft_memchr \
 		ft_lstnew ft_lstdelone ft_lstdel ft_lstadd ft_lstiter ft_lstmap \
 		ft_lstdelif \
 		ft_sstkswap ft_sstkpush ft_sstkpop ft_sstkrot ft_sstkrrot \
-		ft_sstkchkord ft_sstkdisp ft_sstkinit ft_sstkdel \
+		ft_sstkchkord ft_sstkdisp ft_sstkinit ft_sstkdel ft_sstkcpy \
 		ft_getnextline ft_putnchar \
 		ft_printf io parsing parsing_utils io_csr io_doxb io_utils cast io_f \
 		io_k io_other io_p f_utils

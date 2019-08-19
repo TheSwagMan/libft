@@ -6,7 +6,7 @@
 /*   By: tpotier <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/02 19:08:22 by tpotier           #+#    #+#             */
-/*   Updated: 2019/05/06 02:43:21 by tpotier          ###   ########.fr       */
+/*   Updated: 2019/08/06 15:43:05 by tpotier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -218,6 +218,7 @@ int					ft_sstkchkord(t_sstack *stk);
 void				ft_sstkdisp(t_sstack *stk);
 t_sstack			*ft_sstkinit(size_t s);
 void				ft_sstkdel(t_sstack **stk);
+t_sstack			*ft_sstkcpy(t_sstack *s);
 
 int					ft_printf(const char *format, ...);
 
