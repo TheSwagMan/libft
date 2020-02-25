@@ -6,7 +6,7 @@
 /*   By: tpotier <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/02 19:08:22 by tpotier           #+#    #+#             */
-/*   Updated: 2019/08/06 15:43:05 by tpotier          ###   ########.fr       */
+/*   Updated: 2020/02/25 19:22:19 by tpotier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 # define FLAG_0		(1 << _FLAG_0)
 # define FLAG_M		(1 << _FLAG_M)
 # define FLAG_P		(1 << _FLAG_P)
-# define FLAG_SP		(1 << _FLAG_SP)
+# define FLAG_SP	(1 << _FLAG_SP)
 
 # define CONV_CHARS	"cspdDioOuUxXfkKbBr"
 # define FLAG_CHARS	"#0-+ "
