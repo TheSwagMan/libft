@@ -6,7 +6,7 @@
 /*   By: tpotier <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/24 16:06:17 by tpotier           #+#    #+#             */
-/*   Updated: 2019/05/05 23:30:01 by tpotier          ###   ########.fr       */
+/*   Updated: 2020/03/03 19:25:57 by tpotier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void		put_special(long double f)
 {
-	if (f == INFP || f == INFN)
+	if (f == INFINITY || f == -INFINITY)
 		ft_putstr("inf");
 	if (f != f)
 		ft_putstr("nan");

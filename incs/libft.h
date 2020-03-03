@@ -6,7 +6,7 @@
 /*   By: tpotier <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/02 19:08:22 by tpotier           #+#    #+#             */
-/*   Updated: 2020/02/25 19:22:19 by tpotier          ###   ########.fr       */
+/*   Updated: 2020/03/03 19:25:09 by tpotier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,28 +18,29 @@
 # include <string.h>
 # include <stdarg.h>
 # include <inttypes.h>
+# include <math.h>
 
 # define GNL_BS		32
-# define FLAG_SH	(1 << _FLAG_SH)
-# define FLAG_0		(1 << _FLAG_0)
-# define FLAG_M		(1 << _FLAG_M)
-# define FLAG_P		(1 << _FLAG_P)
-# define FLAG_SP	(1 << _FLAG_SP)
+# define FLAG_SH	1
+# define FLAG_0		2
+# define FLAG_M		4
+# define FLAG_P		8
+# define FLAG_SP	16
 
 # define CONV_CHARS	"cspdDioOuUxXfkKbBr"
 # define FLAG_CHARS	"#0-+ "
 # define MOD_CHARS	"lhLjz"
 # define DIGITS		"0123456789"
-# define VALID_CHRS	(FLAG_CHARS MOD_CHARS DIGITS ".*")
+# define VALID_CHRS	"#0-+ lhLjz0123456789.*"
 
 # define K_COL_MSK	0xffffffUL
 
-# define K_M_BOLD	(1UL << 48)
-# define K_M_NBOLD	(1UL << 49)
-# define K_M_ITAL	(1UL << 50)
-# define K_M_NITAL	(1UL << 51)
-# define K_M_UNDER	(1UL << 52)
-# define K_M_NUNDER	(1UL << 53)
+# define K_M_BOLD	0x1000000000000UL
+# define K_M_NBOLD	0x2000000000000UL
+# define K_M_ITAL	0x4000000000000UL
+# define K_M_NITAL	0x8000000000000UL
+# define K_M_UNDER	0x10000000000000UL
+# define K_M_NUNDER	0x20000000000000UL
 
 # define K_BLACK	0x000000UL
 # define K_RED		0xff0000UL
@@ -51,9 +52,6 @@
 # define K_WHITE	0xffffffUL
 
 # define K_BG_SHIFT	24
-
-# define INFP		(1.0 / 0.0)
-# define INFN		(-1.0 / 0.0)
 
 enum				e_flags
 {
